@@ -6,9 +6,18 @@
   <h1>Welcome to Meteor!</h1>
 
   {{> hello}}
+  {{> timeline}}
 </body>
 
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="timeline">
+  <ul>
+    {{#each events}}
+      <li>{{type}} {{action}}</li>
+    {{/each}}
+  </ul>
 </template>
